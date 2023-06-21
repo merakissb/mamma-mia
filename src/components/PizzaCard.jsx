@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { PizzasContext } from '../context/PizzasContext';
 
@@ -27,20 +27,16 @@ const PizzaCard = ({ pizza }) => {
             ))}
           </ul>
         </Card.Text>
+        <hr></hr>
         <Card.Text className="fw-bold fs-4 text-center">${price}</Card.Text>
-        <Button
-          variant="primary"
-          className="me-2"
-          onClick={handleNavigate}
-        >
-          Ver más 👀
-        </Button>
-        <Button
-          variant="danger"
-          onClick={() => addToCart(pizza)}
-        >
-          Añadir 🛒
-        </Button>
+        <Row>
+          <Col xs={6} md={6} className='d-flex justify-content-start'>
+            <Button variant="primary" onClick={handleNavigate}>Ver más 👀</Button>
+          </Col>
+          <Col xs={6} md={6} className='d-flex justify-content-end'>
+            <Button variant="danger" onClick={() => addToCart(pizza)}>Añadir 🛒</Button>
+          </Col>
+        </Row>
       </Card.Body>
     </Card>
   );

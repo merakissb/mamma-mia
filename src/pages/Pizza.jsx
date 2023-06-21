@@ -24,6 +24,7 @@ const Pizza = () => {
               <li className='list-group-item border-0 p-0' key={index}>🍕 {ingredient}</li>
             ))}
           </ul>
+          <hr></hr>
           <p className='fw-bold fs-5 mt-3'>Precio: ${pizza.price}</p>
         </Col>
         <Col xs={12} md={6} className='d-flex justify-content-end'>
