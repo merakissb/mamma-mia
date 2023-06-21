@@ -18,6 +18,8 @@ const PizzaCard = ({ pizza }) => {
       <Card.Img variant="top" src={img} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
+        <hr></hr>
+        <p className='fw-bold'>Ingredientes:</p>
         <Card.Text>
           <ul className='list-group'>
             {ingredients.map((ingredient, index) => (
@@ -25,7 +27,7 @@ const PizzaCard = ({ pizza }) => {
             ))}
           </ul>
         </Card.Text>
-        <Card.Text className="fw-bold fs-4">${price}</Card.Text>
+        <Card.Text className="fw-bold fs-4 text-center">${price}</Card.Text>
         <Button
           variant="primary"
           className="me-2"
