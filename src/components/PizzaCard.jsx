@@ -19,9 +19,9 @@ const PizzaCard = ({ pizza }) => {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
-          <ul>
+          <ul className='list-group'>
             {ingredients.map((ingredient, index) => (
-              <li key={index}>🍕 {ingredient}</li>
+              <li className='list-group-item border-0 p-0' key={index}>🍕 {ingredient}</li>
             ))}
           </ul>
         </Card.Text>
