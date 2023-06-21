@@ -31,17 +31,16 @@ export const PizzasProvider = ({ children }) => {
     }
   };
 
-  const increment = (i) => {
-    cart[i].count++;
+  const increment = (index) => {
+    cart[index].count++;
     setCart([...cart]);
   };
 
-  const decrement = (i) => {
-    const { count } = cart[i];
-    if (count === 1) {
-      cart.splice(i, 1);
+  const decrement = (index) => {
+    if (cart[index].count === 1) {
+      cart.splice(index, 1);
     } else {
-      cart[i].count--;
+      cart[index].count--;
     }
     setCart([...cart]);
   };
