@@ -10,7 +10,9 @@ export const useFetch = (url) => {
       const data = await response.json();
       setData(data);
       setLoading(false);
+      console.log(data);
     } catch (error) {
+      console.log(error);
       setLoading(false);
     }
   }

@@ -6,7 +6,7 @@ export const PizzasContext = createContext();
 export const PizzasProvider = ({ children }) => {
   const [pizzas, setPizzas] = useState([]);
   const [cart, setCart] = useState([]);
-  const { data, loading } = useFetch("pizzas.json");
+  const { data, loading } = useFetch("/pizzas.json");
 
   useEffect(() => {
     if (data) {
